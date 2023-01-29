@@ -1,0 +1,3 @@
+Paste this into your project builder:
+-l m -l glfw -l dl
+Don't forget to add file libraylib.a to the compiler!
