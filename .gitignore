@@ -1,7 +1,6 @@
-*.a
 main
 main.rave
 main.c
 a.out
 *.h
-a
+hello_world
