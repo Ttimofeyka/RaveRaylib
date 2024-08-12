@@ -108,6 +108,15 @@ struct Font {
     GlyphInfo* glyphs;      // Glyphs info data
 }
 
+alias CAMERA_CUSTOM = 0;
+alias CAMERA_FREE = 1;
+alias CAMERA_ORBITAL = 2;
+alias CAMERA_FIRST_PERSON = 3;
+alias CAMERA_THIRD_PERSON = 4;
+
+alias CAMERA_PERSPECTIVE = 0;
+alias CAMERA_ORTHOGRAPHIC = 1;
+
 // Camera, defines position/orientation in 3d space
 struct Camera3D {
     Vector3 position;       // Camera position
@@ -238,11 +247,168 @@ struct Sound {
 struct Music {
     AudioStream stream;         // Audio stream
     uint frameCount;    // Total number of frames (considering channels)
-    bool looping;               // Music looping enable
+    int looping;               // Music looping enable
 
     int ctxType;                // Type of music context (audio filetype)
     void* ctxData;              // Audio context data, depends on type
 }
+
+alias KEY_NULL            = 0;        // Key: NULL, used for no key pressed
+// Alphanumeric keys
+alias KEY_APOSTROPHE      = 39;      // Key: '
+alias KEY_COMMA           = 44;      // Key: ,
+alias KEY_MINUS           = 45;      // Key: -
+alias KEY_PERIOD          = 46;      // Key: .
+alias KEY_SLASH           = 47;      // Key: /
+alias KEY_ZERO            = 48;      // Key: 0
+alias KEY_ONE             = 49;      // Key: 1
+alias KEY_TWO             = 50;      // Key: 2
+alias KEY_THREE           = 51;      // Key: 3
+alias KEY_FOUR            = 52;      // Key: 4
+alias KEY_FIVE            = 53;      // Key: 5
+alias KEY_SIX             = 54;      // Key: 6
+alias KEY_SEVEN           = 55;      // Key: 7
+alias KEY_EIGHT           = 56;      // Key: 8
+alias KEY_NINE            = 57;      // Key: 9
+alias KEY_SEMICOLON       = 59;      // Key: ;
+alias KEY_EQUAL           = 61;      // Key: =
+alias KEY_A               = 65;      // Key: A | a
+alias KEY_B               = 66;      // Key: B | b
+alias KEY_C               = 67;      // Key: C | c
+alias KEY_D               = 68;      // Key: D | d
+alias KEY_E               = 69;      // Key: E | e
+alias KEY_F               = 70;      // Key: F | f
+alias KEY_G               = 71;      // Key: G | g
+alias KEY_H               = 72;      // Key: H | h
+alias KEY_I               = 73;      // Key: I | i
+alias KEY_J               = 74;      // Key: J | j
+alias KEY_K               = 75;      // Key: K | k
+alias KEY_L               = 76;      // Key: L | l
+alias KEY_M               = 77;      // Key: M | m
+alias KEY_N               = 78;      // Key: N | n
+alias KEY_O               = 79;      // Key: O | o
+alias KEY_P               = 80;      // Key: P | p
+alias KEY_Q               = 81;      // Key: Q | q
+alias KEY_R               = 82;      // Key: R | r
+alias KEY_S               = 83;      // Key: S | s
+alias KEY_T               = 84;      // Key: T | t
+alias KEY_U               = 85;      // Key: U | u
+alias KEY_V               = 86;      // Key: V | v
+alias KEY_W               = 87;      // Key: W | w
+alias KEY_X               = 88;      // Key: X | x
+alias KEY_Y               = 89;      // Key: Y | y
+alias KEY_Z               = 90;      // Key: Z | z
+alias KEY_LEFT_BRACKET    = 91;      // Key: [
+alias KEY_BACKSLASH       = 92;      // Key: '\'
+alias KEY_RIGHT_BRACKET   = 93;      // Key: ]
+alias KEY_GRAVE           = 96;      // Key: `
+// Function keys
+alias KEY_SPACE           = 32;      // Key: Space
+alias KEY_ESCAPE          = 25;      // Key: Esc
+alias KEY_ENTER           = 25;      // Key: Enter
+alias KEY_TAB             = 25;      // Key: Tab
+alias KEY_BACKSPACE       = 25;      // Key: Backspace
+alias KEY_INSERT          = 26;      // Key: Ins
+alias KEY_DELETE          = 26;      // Key: Del
+alias KEY_RIGHT           = 26;      // Key: Cursor right
+alias KEY_LEFT            = 26;      // Key: Cursor left
+alias KEY_DOWN            = 26;      // Key: Cursor down
+alias KEY_UP              = 26;      // Key: Cursor up
+alias KEY_PAGE_UP         = 26;      // Key: Page up
+alias KEY_PAGE_DOWN       = 26;      // Key: Page down
+alias KEY_HOME            = 26;      // Key: Home
+alias KEY_END             = 26;      // Key: End
+alias KEY_CAPS_LOCK       = 28;      // Key: Caps lock
+alias KEY_SCROLL_LOCK     = 28;      // Key: Scroll down
+alias KEY_NUM_LOCK        = 28;      // Key: Num lock
+alias KEY_PRINT_SCREEN    = 28;      // Key: Print screen
+alias KEY_PAUSE           = 28;      // Key: Pause
+alias KEY_F1              = 29;      // Key: F1
+alias KEY_F2              = 29;      // Key: F2
+alias KEY_F3              = 29;      // Key: F3
+alias KEY_F4              = 29;      // Key: F4
+alias KEY_F5              = 29;      // Key: F5
+alias KEY_F6              = 29;      // Key: F6
+alias KEY_F7              = 29;      // Key: F7
+alias KEY_F8              = 29;      // Key: F8
+alias KEY_F9              = 29;      // Key: F9
+alias KEY_F10             = 29;      // Key: F10
+alias KEY_F11             = 30;      // Key: F11
+alias KEY_F12             = 30;      // Key: F12
+alias KEY_LEFT_SHIFT      = 34;      // Key: Shift left
+alias KEY_LEFT_CONTROL    = 34;      // Key: Control left
+alias KEY_LEFT_ALT        = 34;      // Key: Alt left
+alias KEY_LEFT_SUPER      = 34;      // Key: Super left
+alias KEY_RIGHT_SHIFT     = 34;      // Key: Shift right
+alias KEY_RIGHT_CONTROL   = 34;      // Key: Control right
+alias KEY_RIGHT_ALT       = 34;      // Key: Alt right
+alias KEY_RIGHT_SUPER     = 34;      // Key: Super right
+alias KEY_KB_MENU         = 34;      // Key: KB menu
+// Keypad keys
+alias KEY_KP_0            = 32;      // Key: Keypad 0
+alias KEY_KP_1            = 32;      // Key: Keypad 1
+alias KEY_KP_2            = 32;      // Key: Keypad 2
+alias KEY_KP_3            = 32;      // Key: Keypad 3
+alias KEY_KP_4            = 32;      // Key: Keypad 4
+alias KEY_KP_5            = 32;      // Key: Keypad 5
+alias KEY_KP_6            = 32;      // Key: Keypad 6
+alias KEY_KP_7            = 32;      // Key: Keypad 7
+alias KEY_KP_8            = 32;      // Key: Keypad 8
+alias KEY_KP_9            = 32;      // Key: Keypad 9
+alias KEY_KP_DECIMAL      = 33;      // Key: Keypad .
+alias KEY_KP_DIVIDE       = 33;      // Key: Keypad /
+alias KEY_KP_MULTIPLY     = 33;      // Key: Keypad *
+alias KEY_KP_SUBTRACT     = 33;      // Key: Keypad -
+alias KEY_KP_ADD          = 33;      // Key: Keypad +
+alias KEY_KP_ENTER        = 33;      // Key: Keypad Enter
+alias KEY_KP_EQUAL        = 33;      // Key: Keypad =
+// Android key buttons
+alias KEY_BACK            = 4;        // Key: Android back button
+alias KEY_MENU            = 5;        // Key: Android menu button
+alias KEY_VOLUME_UP       = 24;       // Key: Android volume up button
+alias KEY_VOLUME_DOWN     = 25;        // Key: Android volume down button
+
+// Mouse buttons
+alias MOUSE_BUTTON_LEFT    = 0;       // Mouse button left
+alias MOUSE_BUTTON_RIGHT   = 1;       // Mouse button right
+alias MOUSE_BUTTON_MIDDLE  = 2;       // Mouse button middle (pressed wheel)
+alias MOUSE_BUTTON_SIDE    = 3;       // Mouse button side (advanced mouse device)
+alias MOUSE_BUTTON_EXTRA   = 4;       // Mouse button extra (advanced mouse device)
+alias MOUSE_BUTTON_FORWARD = 5;       // Mouse button forward (advanced mouse device)
+alias MOUSE_BUTTON_BACK    = 6;       // Mouse button back (advanced mouse device)
+
+// Add backwards compatibility support for deprecated names
+alias MOUSE_LEFT_BUTTON  = MOUSE_BUTTON_LEFT;
+alias MOUSE_RIGHT_BUTTON = MOUSE_BUTTON_RIGHT;
+alias MOUSE_MIDDLE_BUTTON = MOUSE_BUTTON_MIDDLE;
+
+// Custom raylib color palette for amazing visuals on WHITE background
+alias LIGHTGRAY  = Color{ 200c, 200c, 200c, 255c };   // Light Gray
+alias GRAY       = Color{ 130c, 130c, 130c, 255c };   // Gray
+alias DARKGRAY   = Color{ 80c, 80c, 80c, 255c };      // Dark Gray
+alias YELLOW     = Color{ 253c, 249c, 0c, 255c };     // Yellow
+alias GOLD       = Color{ 255c, 203c, 0c, 255c };     // Gold
+alias ORANGE     = Color{ 255c, 161c, 0c, 255c };     // Orange
+alias PINK       = Color{ 255c, 109c, 194c, 255c };   // Pink
+alias RED        = Color{ 230c, 41c, 55c, 255c };     // Red
+alias MAROON     = Color{ 190c, 33c, 55c, 255c };     // Maroon
+alias GREEN      = Color{ 0c, 228c, 48c, 255c };      // Green
+alias LIME       = Color{ 0c, 158c, 47c, 255c };      // Lime
+alias DARKGREEN  = Color{ 0c, 117c, 44c, 255c };      // Dark Green
+alias SKYBLUE    = Color{ 102c, 191c, 255c, 255c };   // Sky Blue
+alias BLUE       = Color{ 0c, 121c, 241c, 255c };     // Blue
+alias DARKBLUE   = Color{ 0c, 82c, 172c, 255c };      // Dark Blue
+alias PURPLE     = Color{ 200c, 122c, 255c, 255c };   // Purple
+alias VIOLET     = Color{ 135c, 60c, 190c, 255c };    // Violet
+alias DARKPURPLE = Color{ 112c, 31c, 126c, 255c };    // Dark Purple
+alias BEIGE      = Color{ 211c, 176c, 131c, 255c };   // Beige
+alias BROWN      = Color{ 127c, 106c, 79c, 255c };    // Brown
+alias DARKBROWN  = Color{ 76c, 63c, 47c, 255c };      // Dark Brown
+alias WHITE      = Color{ 255c, 255c, 255c, 255c };   // White
+alias BLACK      = Color{ 0c, 0c, 0c, 255c };         // Black
+alias BLANK      = Color{ 0c, 0c, 0c, 0c };           // Blank (Transparent)
+alias MAGENTA    = Color{ 255c, 0c, 255c, 255c };     // Magenta
+alias RAYWHITE   = Color{ 245c, 245c, 245c, 255c };   // My own White (raylib logo)
 
 // Window-related functions
 extern(C, cdecl64) void InitWindow(int width, int height, char* title);  // Initialize window and OpenGL context
@@ -304,9 +470,9 @@ extern(C, cdecl64) int IsCursorOnScreen();                                // Che
 extern(C, cdecl64) void ClearBackground(Color color);                          // Set background color (framebuffer clear color)
 extern(C, cdecl64) void BeginDrawing();                                    // Setup canvas (framebuffer) to start drawing
 extern(C, cdecl64) void EndDrawing();                                      // End canvas drawing and swap buffers (double buffering)
-extern(C, cdecl64) void BeginMode2D(Camera2D camera);                          // Begin 2D mode with custom camera (2D)
+extern(C, cdecl64) void BeginMode2D(Camera2D* camera);                          // Begin 2D mode with custom camera (2D)
 extern(C, cdecl64) void EndMode2D();                                       // Ends 2D mode with custom camera
-extern(C, cdecl64) void BeginMode3D(Camera3D camera);                          // Begin 3D mode with custom camera (3D)
+extern(C, cdecl64) void BeginMode3D(Camera3D* camera);                          // Begin 3D mode with custom camera (3D)
 extern(C, cdecl64) void EndMode3D();                                       // Ends 3D mode and returns to default 2D orthographic mode
 extern(C, cdecl64) void BeginTextureMode(RenderTexture2D target);              // Begin drawing to render texture
 extern(C, cdecl64) void EndTextureMode();                                  // Ends drawing to render texture
@@ -410,6 +576,13 @@ extern(C, cdecl64) void DrawTriangleStrip(Vector2* points, int pointCount, Color
 extern(C, cdecl64) void DrawPoly(Vector2 center, int sides, float radius, float rotation, Color color);               // Draw a regular polygon (Vector version)
 extern(C, cdecl64) void DrawPolyLines(Vector2 center, int sides, float radius, float rotation, Color color);          // Draw a polygon outline of n sides
 extern(C, cdecl64) void DrawPolyLinesEx(Vector2 center, int sides, float radius, float rotation, float lineThick, Color color); // Draw a polygon outline of n sides with extended parameters
+extern(C, cdecl64) void DrawPlane(Vector3 centerPos, Vector2 size, Color color);
+extern(C, cdecl64) void DrawCube(Vector3 position, float width, float height, float length, Color color);
+extern(C, cdecl64) void DrawCubeV(Vector3 position, Vector3 size, Color color);
+extern(C, cdecl64) void DrawCubeWires(Vector3 position, float width, float height, float length, Color color);        // Draw cube wires
+extern(C, cdecl64) void DrawCubeWiresV(Vector3 position, Vector3 size, Color color);                                  // Draw cube wires (Vector version)
+extern(C, cdecl64) void DrawGrid(int slices, float spacing);
+extern(C, cdecl64) Color Fade(Color color, float alpha);
 // Splines drawing functions
 extern(C, cdecl64) void DrawSplineLinear(Vector2* points, int pointCount, float thick, Color color);                  // Draw spline: Linear, minimum 2 points
 extern(C, cdecl64) void DrawSplineBasis(Vector2* points, int pointCount, float thick, Color color);                   // Draw spline: B-Spline, minimum 4 points
@@ -564,3 +737,18 @@ extern(C, cdecl64) void AttachAudioStreamProcessor(AudioStream stream, void(void
 extern(C, cdecl64) void DetachAudioStreamProcessor(AudioStream stream, void(void*, uint) processor); // Detach audio stream processor from streamextern(C, cdecl64) 
 extern(C, cdecl64) void AttachAudioMixedProcessor(void(void*, uint) processor); // Attach audio stream processor to the entire audio pipeline, receives the samples as s
 extern(C, cdecl64) void DetachAudioMixedProcessor(void(void*, uint) processor); // Detach audio stream processor from the entire audio pipeline
+// Input-related functions: keyboard
+extern(C, cdecl64) int IsKeyPressed(int key);                             // Check if a key has been pressed once
+extern(C, cdecl64) int IsKeyPressedRepeat(int key);                       // Check if a key has been pressed again (Only PLATFORM_DESKTOP)
+extern(C, cdecl64) int IsKeyDown(int key);                                // Check if a key is being pressed
+extern(C, cdecl64) int IsKeyReleased(int key);                            // Check if a key has been released once
+extern(C, cdecl64) int IsKeyUp(int key);                                  // Check if a key is NOT being pressed
+extern(C, cdecl64) int GetKeyPressed();                                // Get key pressed (keycode), call it multiple times for keys queued, returns 0 when the queue is empty
+extern(C, cdecl64) int GetCharPressed();                               // Get char pressed (unicode), call it multiple times for chars queued, returns 0 when the queue is empty
+
+// Camera rotation
+extern(C, cdecl64) void CameraYaw(Camera* camera, float angle, int rotateAroundTarget);
+extern(C, cdecl64) void CameraPitch(Camera* camera, float angle, int lockView, int rotateAroundTarget, int rotateUp);
+extern(C, cdecl64) void CameraRoll(Camera* camera, float angle);
+
+extern(C, cdecl64) void UpdateCamera(Camera* camera, int mode);
