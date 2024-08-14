@@ -4,5 +4,5 @@ main.c
 a.out
 *.h
 hello_world
-simple_3d
+input_keys
 *.ll

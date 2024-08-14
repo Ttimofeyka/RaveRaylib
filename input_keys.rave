@@ -1,0 +1,23 @@
+import "raylib"
+
+void main {
+    InitWindow(800, 450, "raylib [core] example - keyboard input");
+    SetTargetFPS(60);
+
+    Vector2 ballPosition = Vector2{400f, 225f};
+
+    while(WindowShouldClose() == 0) {
+        if(IsKeyDown(KEY_RIGHT) == 1) ballPosition.x += 2.0f;
+        if(IsKeyDown(KEY_LEFT) == 1) ballPosition.x -= 2.0f;
+        if(IsKeyDown(KEY_UP) == 1) ballPosition.y -= 2.0f;
+        if(IsKeyDown(KEY_DOWN) == 1) ballPosition.y += 2.0f;
+
+        BeginDrawing();
+            ClearBackground(RAYWHITE);
+            DrawText("move the ball with arrow keys", 10, 10, 20, DARKGRAY);
+            DrawCircleV(ballPosition, 50f, MAROON);
+        EndDrawing();
+    }
+
+    CloseWindow();        // Close window and OpenGL context
+}

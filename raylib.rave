@@ -254,7 +254,6 @@ struct Music {
 }
 
 alias KEY_NULL            = 0;        // Key: NULL, used for no key pressed
-// Alphanumeric keys
 alias KEY_APOSTROPHE      = 39;      // Key: '
 alias KEY_COMMA           = 44;      // Key: ,
 alias KEY_MINUS           = 45;      // Key: -
@@ -302,71 +301,71 @@ alias KEY_LEFT_BRACKET    = 91;      // Key: [
 alias KEY_BACKSLASH       = 92;      // Key: '\'
 alias KEY_RIGHT_BRACKET   = 93;      // Key: ]
 alias KEY_GRAVE           = 96;      // Key: `
-// Function keys
+
 alias KEY_SPACE           = 32;      // Key: Space
-alias KEY_ESCAPE          = 25;      // Key: Esc
-alias KEY_ENTER           = 25;      // Key: Enter
-alias KEY_TAB             = 25;      // Key: Tab
-alias KEY_BACKSPACE       = 25;      // Key: Backspace
-alias KEY_INSERT          = 26;      // Key: Ins
-alias KEY_DELETE          = 26;      // Key: Del
-alias KEY_RIGHT           = 26;      // Key: Cursor right
-alias KEY_LEFT            = 26;      // Key: Cursor left
-alias KEY_DOWN            = 26;      // Key: Cursor down
-alias KEY_UP              = 26;      // Key: Cursor up
-alias KEY_PAGE_UP         = 26;      // Key: Page up
-alias KEY_PAGE_DOWN       = 26;      // Key: Page down
-alias KEY_HOME            = 26;      // Key: Home
-alias KEY_END             = 26;      // Key: End
-alias KEY_CAPS_LOCK       = 28;      // Key: Caps lock
-alias KEY_SCROLL_LOCK     = 28;      // Key: Scroll down
-alias KEY_NUM_LOCK        = 28;      // Key: Num lock
-alias KEY_PRINT_SCREEN    = 28;      // Key: Print screen
-alias KEY_PAUSE           = 28;      // Key: Pause
-alias KEY_F1              = 29;      // Key: F1
-alias KEY_F2              = 29;      // Key: F2
-alias KEY_F3              = 29;      // Key: F3
-alias KEY_F4              = 29;      // Key: F4
-alias KEY_F5              = 29;      // Key: F5
-alias KEY_F6              = 29;      // Key: F6
-alias KEY_F7              = 29;      // Key: F7
-alias KEY_F8              = 29;      // Key: F8
-alias KEY_F9              = 29;      // Key: F9
-alias KEY_F10             = 29;      // Key: F10
-alias KEY_F11             = 30;      // Key: F11
-alias KEY_F12             = 30;      // Key: F12
-alias KEY_LEFT_SHIFT      = 34;      // Key: Shift left
-alias KEY_LEFT_CONTROL    = 34;      // Key: Control left
-alias KEY_LEFT_ALT        = 34;      // Key: Alt left
-alias KEY_LEFT_SUPER      = 34;      // Key: Super left
-alias KEY_RIGHT_SHIFT     = 34;      // Key: Shift right
-alias KEY_RIGHT_CONTROL   = 34;      // Key: Control right
-alias KEY_RIGHT_ALT       = 34;      // Key: Alt right
-alias KEY_RIGHT_SUPER     = 34;      // Key: Super right
-alias KEY_KB_MENU         = 34;      // Key: KB menu
-// Keypad keys
-alias KEY_KP_0            = 32;      // Key: Keypad 0
-alias KEY_KP_1            = 32;      // Key: Keypad 1
-alias KEY_KP_2            = 32;      // Key: Keypad 2
-alias KEY_KP_3            = 32;      // Key: Keypad 3
-alias KEY_KP_4            = 32;      // Key: Keypad 4
-alias KEY_KP_5            = 32;      // Key: Keypad 5
-alias KEY_KP_6            = 32;      // Key: Keypad 6
-alias KEY_KP_7            = 32;      // Key: Keypad 7
-alias KEY_KP_8            = 32;      // Key: Keypad 8
-alias KEY_KP_9            = 32;      // Key: Keypad 9
-alias KEY_KP_DECIMAL      = 33;      // Key: Keypad .
-alias KEY_KP_DIVIDE       = 33;      // Key: Keypad /
-alias KEY_KP_MULTIPLY     = 33;      // Key: Keypad *
-alias KEY_KP_SUBTRACT     = 33;      // Key: Keypad -
-alias KEY_KP_ADD          = 33;      // Key: Keypad +
-alias KEY_KP_ENTER        = 33;      // Key: Keypad Enter
-alias KEY_KP_EQUAL        = 33;      // Key: Keypad =
-// Android key buttons
-alias KEY_BACK            = 4;        // Key: Android back button
-alias KEY_MENU            = 5;        // Key: Android menu button
-alias KEY_VOLUME_UP       = 24;       // Key: Android volume up button
-alias KEY_VOLUME_DOWN     = 25;        // Key: Android volume down button
+alias KEY_ESCAPE          = 256;      // Key: Esc
+alias KEY_ENTER           = 257;      // Key: Enter
+alias KEY_TAB             = 258;      // Key: Tab
+alias KEY_BACKSPACE       = 259;      // Key: Backspace
+alias KEY_INSERT          = 260;      // Key: Ins
+alias KEY_DELETE          = 261;      // Key: Del
+alias KEY_RIGHT           = 262;      // Key: Cursor right
+alias KEY_LEFT            = 263;      // Key: Cursor left
+alias KEY_DOWN            = 264;      // Key: Cursor down
+alias KEY_UP              = 265;      // Key: Cursor up
+alias KEY_PAGE_UP         = 266;      // Key: Page up
+alias KEY_PAGE_DOWN       = 267;      // Key: Page down
+alias KEY_HOME            = 268;      // Key: Home
+alias KEY_END             = 269;      // Key: End
+alias KEY_CAPS_LOCK       = 280;      // Key: Caps lock
+alias KEY_SCROLL_LOCK     = 281;      // Key: Scroll down
+alias KEY_NUM_LOCK        = 282;      // Key: Num lock
+alias KEY_PRINT_SCREEN    = 283;      // Key: Print screen
+alias KEY_PAUSE           = 284;      // Key: Pause
+alias KEY_F1              = 290;      // Key: F1
+alias KEY_F2              = 291;      // Key: F2
+alias KEY_F3              = 292;      // Key: F3
+alias KEY_F4              = 293;      // Key: F4
+alias KEY_F5              = 294;      // Key: F5
+alias KEY_F6              = 295;      // Key: F6
+alias KEY_F7              = 296;      // Key: F7
+alias KEY_F8              = 297;      // Key: F8
+alias KEY_F9              = 298;      // Key: F9
+alias KEY_F10             = 299;      // Key: F10
+alias KEY_F11             = 300;      // Key: F11
+alias KEY_F12             = 301;      // Key: F12
+alias KEY_LEFT_SHIFT      = 340;      // Key: Shift left
+alias KEY_LEFT_CONTROL    = 341;      // Key: Control left
+alias KEY_LEFT_ALT        = 342;      // Key: Alt left
+alias KEY_LEFT_SUPER      = 343;      // Key: Super left
+alias KEY_RIGHT_SHIFT     = 344;      // Key: Shift right
+alias KEY_RIGHT_CONTROL   = 345;      // Key: Control right
+alias KEY_RIGHT_ALT       = 346;      // Key: Alt right
+alias KEY_RIGHT_SUPER     = 347;      // Key: Super right
+alias KEY_KB_MENU         = 348;      // Key: KB menu
+
+alias KEY_KP_0            = 320;      // Key: Keypad 0
+alias KEY_KP_1            = 321;      // Key: Keypad 1
+alias KEY_KP_2            = 322;      // Key: Keypad 2
+alias KEY_KP_3            = 323;      // Key: Keypad 3
+alias KEY_KP_4            = 324;      // Key: Keypad 4
+alias KEY_KP_5            = 325;      // Key: Keypad 5
+alias KEY_KP_6            = 326;      // Key: Keypad 6
+alias KEY_KP_7            = 327;      // Key: Keypad 7
+alias KEY_KP_8            = 328;      // Key: Keypad 8
+alias KEY_KP_9            = 329;      // Key: Keypad 9
+alias KEY_KP_DECIMAL      = 330;      // Key: Keypad .
+alias KEY_KP_DIVIDE       = 331;      // Key: Keypad /
+alias KEY_KP_MULTIPLY     = 332;      // Key: Keypad *
+alias KEY_KP_SUBTRACT     = 333;      // Key: Keypad -
+alias KEY_KP_ADD          = 334;      // Key: Keypad +
+alias KEY_KP_ENTER        = 335;      // Key: Keypad Enter
+alias KEY_KP_EQUAL        = 336;      // Key: Keypad =
+
+alias KEY_BACK            = 4;      // Key: Android back button
+alias KEY_MENU            = 5;      // Key: Android menu button
+alias KEY_VOLUME_UP       = 24;      // Key: Android volume up button
+alias KEY_VOLUME_DOWN     = 25;      // Key: Android volume down button
 
 // Mouse buttons
 alias MOUSE_BUTTON_LEFT    = 0;       // Mouse button left
@@ -410,18 +409,44 @@ alias BLANK      = Color{ 0c, 0c, 0c, 0c };           // Blank (Transparent)
 alias MAGENTA    = Color{ 255c, 0c, 255c, 255c };     // Magenta
 alias RAYWHITE   = Color{ 245c, 245c, 245c, 255c };   // My own White (raylib logo)
 
+// Gesture
+// NOTE: Provided as bit-wise flags to enable only desired gestures
+alias GESTURE_NONE        = 0;     // No gesture
+alias GESTURE_TAP         = 1;     // Tap gesture
+alias GESTURE_DOUBLETAP   = 2;     // Double tap gesture
+alias GESTURE_HOLD        = 4;     // Hold gesture
+alias GESTURE_DRAG        = 8;     // Drag gesture
+alias GESTURE_SWIPE_RIGHT = 16;     // Swipe right gesture
+alias GESTURE_SWIPE_LEFT  = 32;     // Swipe left gesture
+alias GESTURE_SWIPE_UP    = 64;     // Swipe up gesture
+alias GESTURE_SWIPE_DOWN  = 128;     // Swipe down gesture
+alias GESTURE_PINCH_IN    = 256;     // Pinch in gesture
+alias GESTURE_PINCH_OUT   = 512;     // Pinch out gesture
+
+//------------------------------------------------------------------------------------
+// Gestures and Touch Handling Functions (Module: rgestures)
+//------------------------------------------------------------------------------------
+extern(C, cdecl64) void SetGesturesEnabled(uint flags);      // Enable a set of gestures using flags
+extern(C, cdecl64) char IsGestureDetected(uint gesture);     // Check if a gesture have been detected
+extern(C, cdecl64) int GetGestureDetected();                     // Get latest detected gesture
+extern(C, cdecl64) float GetGestureHoldDuration();               // Get gesture hold time in milliseconds
+extern(C, cdecl64) Vector2 GetGestureDragVector();               // Get gesture drag vector
+extern(C, cdecl64) float GetGestureDragAngle();                  // Get gesture drag angle
+extern(C, cdecl64) Vector2 GetGesturePinchVector();              // Get gesture pinch delta
+extern(C, cdecl64) float GetGesturePinchAngle();                 // Get gesture pinch angle
+
 // Window-related functions
 extern(C, cdecl64) void InitWindow(int width, int height, char* title);  // Initialize window and OpenGL context
 extern(C, cdecl64) void CloseWindow();                                     // Close window and unload OpenGL context
-extern(C, cdecl64) int WindowShouldClose();                               // Check if application should close (KEY_ESCAPE pressed or windows close icon clicked)
-extern(C, cdecl64) int IsWindowReady();                                   // Check if window has been initialized successfully
-extern(C, cdecl64) int IsWindowFullscreen();                              // Check if window is currently fullscreen
-extern(C, cdecl64) int IsWindowHidden();                                  // Check if window is currently hidden (only PLATFORM_DESKTOP)
-extern(C, cdecl64) int IsWindowMinimized();                               // Check if window is currently minimized (only PLATFORM_DESKTOP)
-extern(C, cdecl64) int IsWindowMaximized();                               // Check if window is currently maximized (only PLATFORM_DESKTOP)
-extern(C, cdecl64) int IsWindowFocused();                                 // Check if window is currently focused (only PLATFORM_DESKTOP)
-extern(C, cdecl64) int IsWindowResized();                                 // Check if window has been resized last frame
-extern(C, cdecl64) int IsWindowState(int flag);                      // Check if one specific window flag is enabled
+extern(C, cdecl64) char WindowShouldClose();                               // Check if application should close (KEY_ESCAPE pressed or windows close icon clicked)
+extern(C, cdecl64) char IsWindowReady();                                   // Check if window has been initialized successfully
+extern(C, cdecl64) char IsWindowFullscreen();                              // Check if window is currently fullscreen
+extern(C, cdecl64) char IsWindowHidden();                                  // Check if window is currently hidden (only PLATFORM_DESKTOP)
+extern(C, cdecl64) char IsWindowMinimized();                               // Check if window is currently minimized (only PLATFORM_DESKTOP)
+extern(C, cdecl64) char IsWindowMaximized();                               // Check if window is currently maximized (only PLATFORM_DESKTOP)
+extern(C, cdecl64) char IsWindowFocused();                                 // Check if window is currently focused (only PLATFORM_DESKTOP)
+extern(C, cdecl64) char IsWindowResized();                                 // Check if window has been resized last frame
+extern(C, cdecl64) char IsWindowState(int flag);                      // Check if one specific window flag is enabled
 extern(C, cdecl64) void SetWindowState(int flags);                    // Set window configuration state using flags (only PLATFORM_DESKTOP)
 extern(C, cdecl64) void ClearWindowState(int flags);                  // Clear window configuration state flags
 extern(C, cdecl64) void ToggleFullscreen();                                // Toggle window state: fullscreen/windowed (only PLATFORM_DESKTOP)
@@ -462,17 +487,17 @@ extern(C, cdecl64) void DisableEventWaiting();                             // Di
 // Cursor-related functions
 extern(C, cdecl64) void ShowCursor();                                      // Shows cursor
 extern(C, cdecl64) void HideCursor();                                      // Hides cursor
-extern(C, cdecl64) int IsCursorHidden();                                  // Check if cursor is not visible
+extern(C, cdecl64) char IsCursorHidden();                                  // Check if cursor is not visible
 extern(C, cdecl64) void EnableCursor();                                    // Enables cursor (unlock cursor)
 extern(C, cdecl64) void DisableCursor();                                   // Disables cursor (lock cursor)
-extern(C, cdecl64) int IsCursorOnScreen();                                // Check if cursor is on the screenextern(C, cdecl64) 
+extern(C, cdecl64) char IsCursorOnScreen();                                // Check if cursor is on the screenextern(C, cdecl64) 
 // Drawing-related functions
 extern(C, cdecl64) void ClearBackground(Color color);                          // Set background color (framebuffer clear color)
 extern(C, cdecl64) void BeginDrawing();                                    // Setup canvas (framebuffer) to start drawing
 extern(C, cdecl64) void EndDrawing();                                      // End canvas drawing and swap buffers (double buffering)
-extern(C, cdecl64) void BeginMode2D(Camera2D* camera);                          // Begin 2D mode with custom camera (2D)
+extern(C, cdecl64) void BeginMode2D(Camera2D camera);                          // Begin 2D mode with custom camera (2D)
 extern(C, cdecl64) void EndMode2D();                                       // Ends 2D mode with custom camera
-extern(C, cdecl64) void BeginMode3D(Camera3D* camera);                          // Begin 3D mode with custom camera (3D)
+extern(C, cdecl64) void BeginMode3D(Camera3D camera);                          // Begin 3D mode with custom camera (3D)
 extern(C, cdecl64) void EndMode3D();                                       // Ends 3D mode and returns to default 2D orthographic mode
 extern(C, cdecl64) void BeginTextureMode(RenderTexture2D target);              // Begin drawing to render texture
 extern(C, cdecl64) void EndTextureMode();                                  // Ends drawing to render texture
@@ -491,7 +516,7 @@ extern(C, cdecl64) void UnloadVrStereoConfig(VrStereoConfig config);           /
 // NOTE: Shader functionality is not available on OpenGL 1.1
 extern(C, cdecl64) Shader LoadShader(char* vsFileName, char* fsFileName);   // Load shader from files and bind default locations
 extern(C, cdecl64) Shader LoadShaderFromMemory(char* vsCode, char* fsCode); // Load shader from code strings and bind default locations
-extern(C, cdecl64) int IsShaderReady(Shader shader);                                   // Check if a shader is ready
+extern(C, cdecl64) char IsShaderReady(Shader shader);                                   // Check if a shader is ready
 extern(C, cdecl64) int GetShaderLocation(Shader shader, char* uniformName);       // Get shader uniform location
 extern(C, cdecl64) int GetShaderLocationAttrib(Shader shader, char* attribName);  // Get shader attribute location
 extern(C, cdecl64) void SetShaderValue(Shader shader, int locIndex, void *value, int uniformType);               // Set shader uniform value
@@ -618,7 +643,7 @@ extern(C, cdecl64) Font LoadFont(char* fileName);                               
 extern(C, cdecl64) Font LoadFontEx(char* fileName, int fontSize, int* codepoints, int codepointCount);  // Load font from file with extended parameters, use NULL for codepoints and 0 for codepointCount to load the default character set
 extern(C, cdecl64) Font LoadFontFromImage(Image image, Color key, int firstChar);                        // Load font from Image (XNA style)
 extern(C, cdecl64) Font LoadFontFromMemory(char* fileType, char* fileData, int dataSize, int fontSize, int* codepoints, int codepointCount); // Load font from memory buffer, fileType refers to extension: i.e. '.ttf'
-extern(C, cdecl64) int IsFontReady(Font font);                                                          // Check if a font is ready
+extern(C, cdecl64) char IsFontReady(Font font);                                                          // Check if a font is ready
 extern(C, cdecl64) GlyphInfo* LoadFontData(char* fileData, int dataSize, int fontSize, int* codepoints, int codepointCount, int type); // Load font data for further use
 extern(C, cdecl64) Image GenImageFontAtlas(GlyphInfo* glyphs, Rectangle** glyphRecs, int glyphCount, int fontSize, int padding, int packMethod); // Generate image font atlas using chars info
 extern(C, cdecl64) void UnloadFontData(GlyphInfo* glyphs, int glyphCount);                               // Unload font chars info data (RAM)
@@ -669,17 +694,17 @@ extern(C, cdecl64) int TextToInteger(char* text);                            // 
 // Audio device management functions
 extern(C, cdecl64) void InitAudioDevice();                                     // Initialize audio device and context
 extern(C, cdecl64) void CloseAudioDevice();                                    // Close the audio device and context
-extern(C, cdecl64) int IsAudioDeviceReady();                                  // Check if audio device has been initialized successfully
+extern(C, cdecl64) char IsAudioDeviceReady();                                  // Check if audio device has been initialized successfully
 extern(C, cdecl64) void SetMasterVolume(float volume);                             // Set master volume (listener)
 extern(C, cdecl64) float GetMasterVolume();                                    // Get master volume (listener)extern(C, cdecl64) 
 // Wave/Sound loading/unloading functions
 extern(C, cdecl64) Wave LoadWave(char* fileName);                            // Load wave data from file
 extern(C, cdecl64) Wave LoadWaveFromMemory(char* fileType, char* fileData, int dataSize); // Load wave from memory buffer, fileType refers to extension: i.e. '.wav'
-extern(C, cdecl64) int IsWaveReady(Wave wave);                                    // Checks if wave data is ready
+extern(C, cdecl64) char IsWaveReady(Wave wave);                                    // Checks if wave data is ready
 extern(C, cdecl64) Sound LoadSound(char* fileName);                          // Load sound from file
 extern(C, cdecl64) Sound LoadSoundFromWave(Wave wave);                             // Load sound from wave data
 extern(C, cdecl64) Sound LoadSoundAlias(Sound source);                             // Create a new sound that shares the same sample data as the source sound, does not own the sound data
-extern(C, cdecl64) int IsSoundReady(Sound sound);                                 // Checks if a sound is ready
+extern(C, cdecl64) char IsSoundReady(Sound sound);                                 // Checks if a sound is ready
 extern(C, cdecl64) void UpdateSound(Sound sound, void *data, int sampleCount); // Update sound buffer with new data
 extern(C, cdecl64) void UnloadWave(Wave wave);                                     // Unload wave data
 extern(C, cdecl64) void UnloadSound(Sound sound);                                  // Unload sound
@@ -691,7 +716,7 @@ extern(C, cdecl64) void PlaySound(Sound sound);                                 
 extern(C, cdecl64) void StopSound(Sound sound);                                    // Stop playing a sound
 extern(C, cdecl64) void PauseSound(Sound sound);                                   // Pause a sound
 extern(C, cdecl64) void ResumeSound(Sound sound);                                  // Resume a paused sound
-extern(C, cdecl64) int IsSoundPlaying(Sound sound);                               // Check if a sound is currently playing
+extern(C, cdecl64) char IsSoundPlaying(Sound sound);                               // Check if a sound is currently playing
 extern(C, cdecl64) void SetSoundVolume(Sound sound, float volume);                 // Set volume for a sound (1.0 is max level)
 extern(C, cdecl64) void SetSoundPitch(Sound sound, float pitch);                   // Set pitch for a sound (1.0 is base level)
 extern(C, cdecl64) void SetSoundPan(Sound sound, float pan);                       // Set pan for a sound (0.5 is center)
@@ -703,10 +728,10 @@ extern(C, cdecl64) void UnloadWaveSamples(float *samples);                      
 // Music management functions
 extern(C, cdecl64) Music LoadMusicStream(char* fileName);                    // Load music stream from file
 extern(C, cdecl64) Music LoadMusicStreamFromMemory(char* fileType, char* data, int dataSize); // Load music stream from data
-extern(C, cdecl64) int IsMusicReady(Music music);                                 // Checks if a music stream is ready
+extern(C, cdecl64) char IsMusicReady(Music music);                                 // Checks if a music stream is ready
 extern(C, cdecl64) void UnloadMusicStream(Music music);                            // Unload music stream
 extern(C, cdecl64) void PlayMusicStream(Music music);                              // Start music playing
-extern(C, cdecl64) int IsMusicStreamPlaying(Music music);                         // Check if music is playing
+extern(C, cdecl64) char IsMusicStreamPlaying(Music music);                         // Check if music is playing
 extern(C, cdecl64) void UpdateMusicStream(Music music);                            // Updates buffers for music streaming
 extern(C, cdecl64) void StopMusicStream(Music music);                              // Stop music playing
 extern(C, cdecl64) void PauseMusicStream(Music music);                             // Pause music playing
@@ -719,14 +744,14 @@ extern(C, cdecl64) float GetMusicTimeLength(Music music);                       
 extern(C, cdecl64) float GetMusicTimePlayed(Music music);                          // Get current music time played (in seconds)extern(C, cdecl64) 
 // AudioStream management functions
 extern(C, cdecl64) AudioStream LoadAudioStream(int sampleRate, int sampleSize, int channels); // Load audio stream (to stream raw audio pcm data)
-extern(C, cdecl64) int IsAudioStreamReady(AudioStream stream);                    // Checks if an audio stream is ready
+extern(C, cdecl64) char IsAudioStreamReady(AudioStream stream);                    // Checks if an audio stream is ready
 extern(C, cdecl64) void UnloadAudioStream(AudioStream stream);                     // Unload audio stream and free memory
 extern(C, cdecl64) void UpdateAudioStream(AudioStream stream, void *data, int frameCount); // Update audio stream buffers with data
-extern(C, cdecl64) int IsAudioStreamProcessed(AudioStream stream);                // Check if any audio stream buffers requires refill
+extern(C, cdecl64) char IsAudioStreamProcessed(AudioStream stream);                // Check if any audio stream buffers requires refill
 extern(C, cdecl64) void PlayAudioStream(AudioStream stream);                       // Play audio stream
 extern(C, cdecl64) void PauseAudioStream(AudioStream stream);                      // Pause audio stream
 extern(C, cdecl64) void ResumeAudioStream(AudioStream stream);                     // Resume audio stream
-extern(C, cdecl64) int IsAudioStreamPlaying(AudioStream stream);                  // Check if audio stream is playing
+extern(C, cdecl64) char IsAudioStreamPlaying(AudioStream stream);                  // Check if audio stream is playing
 extern(C, cdecl64) void StopAudioStream(AudioStream stream);                       // Stop audio stream
 extern(C, cdecl64) void SetAudioStreamVolume(AudioStream stream, float volume);    // Set volume for audio stream (1.0 is max level)
 extern(C, cdecl64) void SetAudioStreamPitch(AudioStream stream, float pitch);      // Set pitch for audio stream (1.0 is base level)
@@ -738,11 +763,11 @@ extern(C, cdecl64) void DetachAudioStreamProcessor(AudioStream stream, void(void
 extern(C, cdecl64) void AttachAudioMixedProcessor(void(void*, uint) processor); // Attach audio stream processor to the entire audio pipeline, receives the samples as s
 extern(C, cdecl64) void DetachAudioMixedProcessor(void(void*, uint) processor); // Detach audio stream processor from the entire audio pipeline
 // Input-related functions: keyboard
-extern(C, cdecl64) int IsKeyPressed(int key);                             // Check if a key has been pressed once
-extern(C, cdecl64) int IsKeyPressedRepeat(int key);                       // Check if a key has been pressed again (Only PLATFORM_DESKTOP)
-extern(C, cdecl64) int IsKeyDown(int key);                                // Check if a key is being pressed
-extern(C, cdecl64) int IsKeyReleased(int key);                            // Check if a key has been released once
-extern(C, cdecl64) int IsKeyUp(int key);                                  // Check if a key is NOT being pressed
+extern(C, cdecl64) char IsKeyPressed(int key);                             // Check if a key has been pressed once
+extern(C, cdecl64) char IsKeyPressedRepeat(int key);                       // Check if a key has been pressed again (Only PLATFORM_DESKTOP)
+extern(C, cdecl64) char IsKeyDown(int key);                                // Check if a key is being pressed
+extern(C, cdecl64) char IsKeyReleased(int key);                            // Check if a key has been released once
+extern(C, cdecl64) char IsKeyUp(int key);                                  // Check if a key is NOT being pressed
 extern(C, cdecl64) int GetKeyPressed();                                // Get key pressed (keycode), call it multiple times for keys queued, returns 0 when the queue is empty
 extern(C, cdecl64) int GetCharPressed();                               // Get char pressed (unicode), call it multiple times for chars queued, returns 0 when the queue is empty
 
